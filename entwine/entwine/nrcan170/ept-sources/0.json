@@ -1,0 +1,67 @@
+{
+  "NRCAN_170_SA30_v0.laz": {
+    "bounds": [
+      619852.53,
+      5611257.8,
+      251.13,
+      620282.9,
+      5611709.3,
+      335.78000000000003
+    ],
+    "metadata": {
+      "comp_spatialreference": "",
+      "compressed": true,
+      "count": 57013646,
+      "creation_doy": 346,
+      "creation_year": 2018,
+      "dataformat_id": 3,
+      "dataoffset": 335,
+      "filesource_id": 0,
+      "global_encoding": 0,
+      "global_encoding_base64": "AAA=",
+      "header_size": 227,
+      "major_version": 1,
+      "maxx": 620282.9,
+      "maxy": 5611709.3,
+      "maxz": 335.78,
+      "minor_version": 2,
+      "minx": 619852.53,
+      "miny": 5611257.8,
+      "minz": 251.13,
+      "offset_x": 0,
+      "offset_y": 0,
+      "offset_z": 0,
+      "point_length": 34,
+      "project_id": "00000000-0000-0000-0000-000000000000",
+      "scale_x": 0.01,
+      "scale_y": 0.01,
+      "scale_z": 0.01,
+      "software_id": "las2las (version 170122)",
+      "spatialreference": "",
+      "srs": {
+        "compoundwkt": "",
+        "horizontal": "",
+        "isgeocentric": false,
+        "isgeographic": false,
+        "prettycompoundwkt": "",
+        "prettywkt": "",
+        "proj4": "",
+        "units": {
+          "horizontal": "unknown",
+          "vertical": ""
+        },
+        "vertical": "",
+        "wkt": ""
+      },
+      "system_id": "LAStools (c) by rapidlasso GmbH",
+      "vlr_0": {
+        "data": "AgAAAAIFAgAAAAAAUMMAAP////////////////////8DAAYAFAACAAcACAACAAgABgACAA==",
+        "description": "by laszip of LAStools (170122)",
+        "record_id": 22204,
+        "user_id": "laszip encoded"
+      }
+    },
+    "origin": 0,
+    "points": 57013646
+  }
+}

@@ -1,0 +1,18 @@
+[
+  {
+    "bounds": [
+      653000.0,
+      3995000.0,
+      773.16,
+      653999.99,
+      3995999.99,
+      817.24
+    ],
+    "id": "lasvegas.las",
+    "inserts": 5414370,
+    "path": "/Users/know1especial/go/src/data/lasvegas.las",
+    "points": 5414370,
+    "status": "inserted",
+    "url": "0.json"
+  }
+]

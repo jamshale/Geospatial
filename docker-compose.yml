@@ -1,0 +1,84 @@
+version: '3'
+
+services:
+
+  web_server-spring:
+    # image: 00theballs00/web_server
+    build: web_server-spring/geospatial/
+    container_name: web_server-spring
+    restart: always
+    working_dir: /opt/app
+    depends_on: 
+      - mongodb
+    ports:
+      - 8080:8080
+    networks:
+      - webnet
+
+
+  mongodb:
+    image: mongo:latest
+    container_name: springboot-mongo
+    ports: 
+      - 27018:27017
+    volumes:
+      - $HOME/data/springboot-mongo-data:/data/db
+      - $HOME/data/springboot-mongo-bkp:/data/bkp
+    restart: always
+    # environment: 
+    #   - MONGO_DATA_DIR=/data/db
+    #   - MONGO_LOG_DIR=/dev/null
+    networks:
+      - webnet
+
+  potree:
+    image: 00theballs00/potree_entwine
+    # build: ./potree_entwine
+    deploy:
+      replicas: 5
+      resources:
+        limits:
+          cpus: "0.1"
+          memory: 50M
+      restart_policy:
+        condition: on-failure
+    # restart: always
+    ports:
+      - "8085:80"
+    networks:
+      - webnet
+
+  entwine_conda:
+    image: 00theballs00/entwine_conda
+    # build: ./entwine
+    deploy:
+      replicas: 5
+      resources:
+        limits:
+          cpus: "0.1"
+          memory: 50M
+      restart_policy:
+        condition: on-failure
+    # volumes:
+    #   - .:/go/src/geospatialDataStore
+    depends_on:
+      - potree
+    ports:
+      - "8111:8089"
+    networks:
+      - webnet
+
+  visualizer:
+    image: dockersamples/visualizer:stable
+    ports:
+      - "12222:12222"
+    volumes:
+      - "/var/run/docker.sock:/var/run/docker.sock"
+    deploy:
+      placement:
+        constraints: [node.role == manager]
+    networks:
+      - webnet
+
+networks:
+  webnet:

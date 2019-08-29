@@ -37,10 +37,10 @@
               <a id="gh" href="#">geospatialDataHub</a>
               <a id="pc" href="#">university of victoria</a>
               <a id="pc" href="#">      </a>
-              <a id="pc" href="#">point cloud</a>
+              <a id="pc" href="#addLidarModal" data-target="#addLidarModal" data-toggle="modal">Add Lidar Image</a>
               <a id="pc" href="#">      </a>
-              <a id="pc" href="#">torrent client</a>
-              <button class="btn btn-danger btn-lg btn-logout" onclick="logoutRedirect()" role="button">Log out</button>
+              <a id="pc" href="#">Manage Torrents</a>
+              <button class="btn btn-danger btn-lg btn-logout" onclick="logoutRedirect()" role="button" >Log out</button>
               <!-- <a href="#news">News</a>
               <a href="#contact">Contact</a>
               <a href="#about">About</a> -->
@@ -76,15 +76,6 @@
             <div class="col-md-3">
               <div class="row" style="background-color: rgba(253, 253, 253, 0)">
                 <h2 id="titles" class="secondary-title">Data Center</h2>
-                  <!-- <ul class="list-group text-center" style="width:80%;margin-left:8%">
-                      <button onclick="lidarLoad(this)" class="list-group-item"><p hidden>lasvegas</p>Las Vegas (UVIC Hyperspectral Lab)</button>
-                      <button onclick="lidarLoad(this)" class="list-group-item"><p hidden>nrcan170</p>Ashcroft (UVIC Hyperspectral Lab)</button>
-                      <button onclick="lidarLoad(this)" class="list-group-item"><p hidden>red-rocks</p>Red Rocks Ampitheatre (Potree)</button>
-                      <button onclick="lidarLoad(this)" class="list-group-item"><p hidden>autzen</p>Autzen (Potree)</button>
-                      <button onclick="lidarLoad(this)" class="list-group-item"><p hidden>hanover</p>Hanover (Potree)</button>
-                      <button onclick="lidarLoad(this)" class="list-group-item"><p hidden>beer-caves</p>Iowa City Beer Caves (UIowa)</button>
-                      
-                  </ul> -->
                   <ul>
                     <button data-point="36.1699,-115.1398,14" onclick="lidarLoad(this); " class="story button"><p hidden>lasvegas</p>Las Vegas (UVIC Hyperspectral Lab)</button>
                     <button data-point="50.7259,-121.2805,14" onclick="lidarLoad(this); " class="story button"><p hidden>nrcan170</p>Ashcroft (UVIC Hyperspectral Lab)</button>
@@ -96,8 +87,6 @@
                     <button data-point="53.3498,-6.2603,14" onclick="lidarLoad(this); " class="story button"><p hidden>dublin</p>Dublin</button>
                     <button data-point="28.3949,84.1240,7" onclick="lidarLoad(this); " class="story button"><p hidden>vanuatu-village</p>Vanuatu Village, Nepal</button>
                     <button data-point="-40.9006,174.886,6" onclick="lidarLoad(this); " class="story button"><p hidden>new-zealand</p>New Zealand</button>
-                    
-                    <!-- <button class="story" data-point="52.3759,9.7320">First location. Click to zoom</button> -->
                   </ul>
   
                   
@@ -135,48 +124,13 @@
               <div class="row" style="background-color: rgba(255, 255, 255, 0);padding-bottom: 100%">
               <h2 class="secondary-title">Download Center</h2>
                   <div id="view" ng-view></div> 
-                  <footer>
-                  <!-- <a class="button" href="https://github.com/DiegoRBaquero/BTorrent/issues" target="_blank"><i class="fa fa-github"></i> Suggest a feature / Report a bug <i class="fa fa-comment"></i></a><br> -->
-                  <!-- <b>βTorrent is an FOSS project made with <span style="color: red">♥</span> by <a href="https://diegorbaquero.com" target="_blank" style="text-decoration: none">DiegoRBaquero</a></b><br>
-                  <b> <a href="https://tracker.btorrent.xyz/stats" target="_blank">βTorrent's Tracker Stats</a></b><br> 
-                  Powered by <a href="https://github.com/webtorrent/webtorrent" target="_blank">WebTorrent</a><br> -->
-                </footer>
+                  <footer></footer>
               </div>
             </div>
           </div>
           
         </div>
-      
-      <!-- <div class="row" style="background-color: rgb(3, 3, 3)">
-          <div class="col-md-1">
-            
-          </div>
-      <div class="col-md-1">
-          <IMG SRC="globe2.png" ALT="some text" WIDTH=100 HEIGHT=100>
-      </div>
-      <div class="col-md-4">
-        <h1>geospatialDataHub</h1>
-      </div>
-      </div> -->
-      <!-- <img id="title-img" src="./images/Title.png" /> -->
-        
-            
-            
-            
-  
-      
-          
-     
-
-    
-
-
-
         </div>
-        
-
-
-
 <div class="spinner" ng-show="client.processing"><i class="fa fa-spinner fa-spin spinner-icon"></i></div>
 <script src="./leaflet/leaflet.js"></script>
 <script src="/js/app.js"></script>
@@ -187,3 +141,33 @@
 
 </body>
 </html>
+
+<!--Register Modal-->
+<!-- Modal -->
+<div class="modal fade" id="addLidarModal" tabindex="-1" role="dialog" aria-labelledby="addLidarModalLabel" aria-hidden="true">
+	<div class="modal-dialog" role="document">
+	  <div class="modal-content">
+		<div class="modal-header">
+		  <h5 class="modal-title" id="addLidarModalLabel">Add Lidar</h5>
+		  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+			<span aria-hidden="true">&times;</span>
+		  </button>
+		</div>
+		<div class="modal-body">
+        <div class="file-upload-wrapper">
+            <form method="post" action="#" id="#">
+           
+              
+              
+              
+                <div class="form-group files">
+                  <label>Upload Your File </label>
+                  <input type="file" class="form-control" multiple="">
+                </div>
+                
+              
+        </div>
+		</div>
+	  </div>
+	</div>
+  </div>
